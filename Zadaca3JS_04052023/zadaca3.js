@@ -74,6 +74,29 @@ Real : 1, 4, 1, 5, 0
 
 */
 
+const prosjek = () => {
+  
+    const Barca = (10+13+1+3+4) / 5; // dodao sam 10 i 13 umjeso 1 i 3 zbog testiranja a rade drugi ishodi
+    const Real = (1+4+1+5+0) / 5;
+    
+    const pobjednik = () => {
+      if (Barca >= Real * 2) {
+        console.log(`Barcelona Pobjeđuje ${Barca} naprema ${Real}.`);
+      } else if (Real >= Barca * 2) {
+        console.log(`Barcelona Pobjeđuje ${Real} naprema ${Barca}.`);
+      } else {
+        console.log("Nemamo pobjednika");
+      }
+    };
+    
+    return Barca,Real,pobjednik()
+  };
+
+  prosjek();
+
+
+
+
 /* Zadatak 4:
 
 I ovo smo već radili :D
@@ -101,3 +124,16 @@ račun 125
 račun 555
 račun 44
 */
+
+function izracunajTotal(iznos) {
+        const total1 = iznos[0] * 1.15;
+        iznos[0] = total1;
+        const total2 = iznos[1] * 1.15;
+        iznos[1] = total2;
+        const total3 = iznos[2] * 1.15;
+        iznos[2] = total3;
+    return iznos;
+}
+const racuni = [125, 555, 44];
+const ukupno = izracunajTotal(racuni);
+console.log(ukupno);
